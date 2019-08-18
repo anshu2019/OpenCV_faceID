@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="693.0" prefWidth="1361.0" style="-fx-background-color: #d0d3d4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="facerecognition.MainController">
+    <children>
+      <Button fx:id="cameraButton" layoutX="466.0" layoutY="605.0" mnemonicParsing="false" onAction="#startWebCam" prefHeight="5.0" prefWidth="126.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 6px; -fx-border-width: 2px;" text="START" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="13.0" />
+         </font></Button>
+      <ImageView fx:id="originalFrame" fitHeight="471.0" fitWidth="611.0" layoutX="385.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="16.0" layoutY="14.0" prefHeight="17.0" prefWidth="331.0" style="-fx-border-color: white; -fx-border-width: 2px; -fx-background-color: black; -fx-border-radius: 6px;" text="                   ADD USER INFORMATION" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="360.0" layoutY="537.0" prefHeight="25.0" prefWidth="661.0" style="-fx-border-color: white; -fx-border-width: 2px; -fx-background-color: black; -fx-border-radius: 6px;" text="                                                                                     WEB CAM" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="13.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="36.0" prefHeight="422.0" prefWidth="335.0" style="-fx-border-color: red; -fx-background-color: d5dbdb; -fx-border-radius: 6px; -fx-border-width: 2px;">
+         <children>
+            <HBox prefHeight="39.0" prefWidth="331.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="104.0" text="  ANDREW ID">
+                     <font>
+                        <Font name="Bell MT Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="2.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtAndrewID" prefHeight="25.0" prefWidth="218.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="39.0" prefWidth="331.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="104.0" text="  NAME">
+                     <font>
+                        <Font name="Bell MT Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtName" prefHeight="25.0" prefWidth="219.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="39.0" prefWidth="331.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="103.0" text="  PROGRAM">
+                     <font>
+                        <Font name="Bell MT Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="cmbProgram" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: white;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="33.0" prefWidth="321.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="104.0" text="  GENDER">
+                     <font>
+                        <Font name="Bell MT Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="cmbGender" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: white;" />
+               </children>
+            </HBox>
+            <HBox prefHeight="47.0" prefWidth="331.0" />
+            <HBox prefHeight="45.0" prefWidth="331.0">
+               <children>
+                  <Button fx:id="btnSaveUser" mnemonicParsing="false" onAction="#saveUserData" prefHeight="25.0" prefWidth="124.0" style="-fx-border-radius: 6px; -fx-border-width: 2px; -fx-background-color: black; -fx-border-color: white;" text="NEW USER" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="98.0" right="25.0" top="7.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Bell MT Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="331.0">
+               <children>
+                  <Button fx:id="btnUpdateImg" mnemonicParsing="false" onAction="#updateUserImage" prefHeight="27.0" prefWidth="123.0" style="-fx-background-color: black; -fx-border-radius: 6px; -fx-border-color: white; -fx-border-width: 2px;" text="UPDATE IMAGE" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="98.0" right="25.0" top="7.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Bell MT Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="48.0" prefWidth="331.0">
+               <children>
+                  <Button fx:id="btnClear" mnemonicParsing="false" onAction="#clearData" prefHeight="27.0" prefWidth="121.0" style="-fx-background-color: black; -fx-border-radius: 6px; -fx-border-color: white; -fx-border-width: 2px;" text="CLEAR" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="98.0" right="25.0" top="7.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Bell MT Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="331.0">
+               <children>
+                  <Label fx:id="sucessLbl" prefHeight="40.0" prefWidth="326.0" style="-fx-font-weight: Bold; -fx-font-family: Bell-Mt;">
+                     <font>
+                        <Font name="Bell MT Italic" size="11.0" />
+                     </font></Label>
+               </children></HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="cmbReasons" layoutX="1030.0" layoutY="38.0" prefHeight="650.0" prefWidth="331.0" style="-fx-border-color: red; -fx-border-radius: 8px; -fx-border-width: 2px; -fx-background-color: #d5dbdb;">
+         <children>
+            <HBox prefHeight="31.0" prefWidth="327.0">
+               <children>
+                  <Label prefHeight="29.0" prefWidth="131.0" style="-fx-background-color: #f1210b; -fx-border-color: white; -fx-border-radius: 6px;" text="    STUDENT PHOTO" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="90.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Bell MT Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="131.0" prefWidth="327.0" style="-fx-border-color: red; -fx-border-radius: 8px; -fx-border-width: 1.5px;">
+               <children>
+                  <ImageView fx:id="imgUser" fitHeight="113.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btnGetInfo" mnemonicParsing="false" onAction="#populateStudentInfo" prefHeight="22.0" prefWidth="191.0" style="-fx-background-color: black; -fx-border-radius: 6px; -fx-border-color: white; -fx-border-width: 2px;" text="DISPLAY STUDENT INFO" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="25.0" right="25.0" top="45.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Bell MT Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="29.0" prefWidth="327.0" style="-fx-border-color: red; -fx-border-radius: 8px;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="167.0" text=" ANDREW ID">
+                     <font>
+                        <Font name="Bell MT Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAndrewId" prefHeight="27.0" prefWidth="232.0" style="-fx-border-radius: 8px;">
+                     <font>
+                        <Font name="Bell MT Bold" size="14.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="12.0" layoutY="12.0" prefHeight="30.0" prefWidth="327.0" style="-fx-border-color: red; -fx-border-radius: 6px;">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="157.0" text=" NAME">
+                     <font>
+                        <Font name="Bell MT Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblName" prefHeight="33.0" prefWidth="230.0" style="-fx-border-radius: 8px;">
+                     <font>
+                        <Font name="Bell MT Bold" size="14.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="12.0" layoutY="49.0" prefHeight="31.0" prefWidth="327.0" style="-fx-border-color: red; -fx-border-radius: 6px;">
+               <children>
+                  <Label prefHeight="29.0" prefWidth="146.0" text=" PROGRAM">
+                     <font>
+                        <Font name="Bell MT Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblProgram" prefHeight="33.0" prefWidth="230.0" style="-fx-border-radius: 8px;">
+                     <font>
+                        <Font name="Bell MT Bold" size="14.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="12.0" layoutY="86.0" prefHeight="32.0" prefWidth="327.0" style="-fx-border-color: red; -fx-border-radius: 6px;">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="148.0" text=" GENDER">
+                     <font>
+                        <Font name="Bell MT Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblGender" prefHeight="33.0" prefWidth="230.0" style="-fx-border-radius: 8px;">
+                     <font>
+                        <Font name="Bell MT Bold" size="14.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="12.0" layoutY="123.0" prefHeight="37.0" prefWidth="327.0" style="-fx-border-color: red; -fx-border-radius: 6px;">
+               <children>
+                  <Label prefHeight="34.0" prefWidth="150.0" text="  LAST VISIT">
+                     <font>
+                        <Font name="Bell MT Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblLastVisit" prefHeight="33.0" prefWidth="230.0" style="-fx-border-radius: 8px;">
+                     <font>
+                        <Font name="Bell MT Bold" size="14.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="12.0" layoutY="160.0" prefHeight="35.0" prefWidth="327.0" style="-fx-border-color: red; -fx-border-radius: 6px;">
+               <children>
+                  <Label prefHeight="34.0" prefWidth="160.0" text="  REASON OF VISIT">
+                     <font>
+                        <Font name="Bell MT Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblReasonVisit" prefHeight="33.0" prefWidth="230.0" style="-fx-border-radius: 8px;">
+                     <font>
+                        <Font name="Bell MT Bold" size="14.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="12.0" layoutY="197.0" prefHeight="36.0" prefWidth="327.0" style="-fx-border-color: red; -fx-border-radius: 6px;">
+               <children>
+                  <Label prefHeight="34.0" prefWidth="154.0" text="  ANNOUNCEMENT">
+                     <font>
+                        <Font name="Bell MT Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblAnnouncement" prefHeight="33.0" prefWidth="230.0" style="-fx-border-radius: 8px;">
+                     <font>
+                        <Font name="Bell MT Bold" size="14.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="327.0" style="-fx-border-color: red; -fx-border-radius: 6px;">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="123.0" text="  NO OF VISITS">
+                     <font>
+                        <Font name="Bell MT Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblNoOfVisit" prefHeight="26.0" prefWidth="196.0">
+                     <font>
+                        <Font name="Bell MT Bold" size="14.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox fx:id="panRsnInsert" prefHeight="59.0" prefWidth="327.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="124.0" text="REASON OF VISIT">
+                     <font>
+                        <Font name="Bell MT Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="cmbReason" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 1px; -fx-border-radius: 6px;">
+                     <HBox.margin>
+                        <Insets top="7.0" />
+                     </HBox.margin></ChoiceBox>
+               </children>
+            </HBox>
+            <HBox fx:id="panSaveInfo" prefHeight="55.0" prefWidth="327.0">
+               <children>
+                  <Button fx:id="btnSaveInfo" mnemonicParsing="false" onAction="#updateVisitInfo" prefHeight="18.0" prefWidth="111.0" style="-fx-background-color: black; -fx-border-radius: 6px; -fx-border-color: white; -fx-border-width: 2px;" text="UPDATE VISIT" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="125.0" right="25.0" top="7.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Bell MT Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="327.0">
+               <children>
+                  <Button fx:id="btnAnalytics" mnemonicParsing="false" onAction="#openAnalyticsWindow" style="-fx-background-color: red; -fx-border-color: white; -fx-border-radius: 6px; -fx-border-width: 2px;" text="SHOW ANALYITICS" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="115.0" right="25.0" top="7.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Bell MT Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="1030.0" layoutY="14.0" prefHeight="17.0" prefWidth="331.0" style="-fx-border-color: white; -fx-border-width: 2px; -fx-background-color: black; -fx-border-radius: 6px;" text="                   DISPLAY USER INFORMATION" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="489.0" prefHeight="201.0" prefWidth="335.0" style="-fx-border-color: black; -fx-border-width: 4px; -fx-border-radius: 6px;">
+         <children>
+            <HBox prefHeight="184.0" prefWidth="327.0">
+               <children>
+                  <TextArea fx:id="txtAreaLogger" prefHeight="199.0" prefWidth="326.0" style="-fx-control-inner-background:#000000; -fx-font-family: Consolas; -fx-highlight-fill: #00ff00; -fx-highlight-text-fill: #000000; -fx-text-fill: #00ff00; " wrapText="true" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="14.0" layoutY="464.0" prefHeight="21.0" prefWidth="335.0" style="-fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 6px; -fx-background-color: black;" text="                                      Logger" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="360.0" layoutY="7.0" prefHeight="35.0" prefWidth="641.0" style="-fx-background-color: #f1210b; -fx-border-radius: 8px; -fx-border-color: white; -fx-border-width: 2px;" text="                              Carnegie Mellon University" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgViewSeal" fitHeight="114.0" fitWidth="160.0" layoutX="631.0" layoutY="562.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnTrainSys" layoutX="799.0" layoutY="607.0" mnemonicParsing="false" onAction="#trainSystem" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: black; -fx-border-radius: 6px; -fx-border-color: white; -fx-border-width: 2px;" text="TRAIN SYSTEM" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="12.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

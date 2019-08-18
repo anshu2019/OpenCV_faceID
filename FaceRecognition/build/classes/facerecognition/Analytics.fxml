@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="639.0" prefWidth="1358.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="facerecognition.MainController">
+   <children>
+      <BorderPane layoutX="7.0" layoutY="8.0" prefHeight="620.0" prefWidth="1345.0" style="-fx-border-color: black;">
+         <top>
+            <Label prefHeight="26.0" prefWidth="236.0" text="                  ANALYTICS REPORT" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Bell MT Bold" size="12.0" />
+               </font>
+            </Label>
+         </top>
+         <left>
+            <BorderPane prefHeight="592.0" prefWidth="660.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+               <top>
+                  <HBox prefHeight="25.0" prefWidth="351.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="556.0" text="                                                                                     Report By Category">
+                           <font>
+                              <Font name="Bell MT Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox prefHeight="565.0" prefWidth="680.0">
+                           <children>
+                              <HBox prefHeight="47.0" prefWidth="349.0">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="92.0" text="    FROM DATE">
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Bell MT Bold" size="11.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="dtFrm1" prefHeight="25.0" prefWidth="138.0">
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                    <Label prefHeight="17.0" prefWidth="93.0" text="    TO DATE">
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Bell MT Bold" size="11.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="dtTo1" prefHeight="25.0" prefWidth="142.0">
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="55.0" prefWidth="658.0">
+                                 <children>
+                                    <Label fx:id="lblChart1Msg" prefHeight="22.0" prefWidth="502.0">
+                                       <font>
+                                          <Font name="Bell MT Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Button fx:id="btnReport1" mnemonicParsing="false" onAction="#genearteReport1" prefHeight="23.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 6px;" text="GENERATE REPORT">
+                                       <HBox.margin>
+                                          <Insets top="12.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Bell MT Bold" size="11.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="441.0" prefWidth="658.0">
+                                 <children>
+                                    <BarChart fx:id="barReport1" animated="false" prefHeight="441.0" prefWidth="650.0" title="Category Report">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis label="FREQUENCY" side="LEFT" upperBound="50.0" />
+                                      </yAxis>
+                                    </BarChart>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </center>
+            </BorderPane>
+         </left>
+         <right>
+            <BorderPane prefHeight="592.0" prefWidth="677.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+               <top>
+                  <HBox prefHeight="28.0" prefWidth="363.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="584.0" text="                                                                                                  Report By Gender">
+                           <font>
+                              <Font name="Bell MT Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <VBox prefHeight="562.0" prefWidth="608.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox prefHeight="45.0" prefWidth="363.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="130.0" text="   FROM DATE">
+                                 <HBox.margin>
+                                    <Insets top="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Bell MT Bold" size="11.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="dtFrm2" prefHeight="25.0" prefWidth="137.0">
+                                 <HBox.margin>
+                                    <Insets top="15.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                              <Label prefHeight="17.0" prefWidth="102.0" text="   TO DATE ">
+                                 <HBox.margin>
+                                    <Insets top="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Bell MT Bold" size="11.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="dtTo2" prefHeight="25.0" prefWidth="133.0">
+                                 <HBox.margin>
+                                    <Insets top="15.0" />
+                                 </HBox.margin>
+                              </DatePicker>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="56.0" prefWidth="675.0">
+                           <children>
+                              <Label fx:id="lblChart2Msg" prefHeight="19.0" prefWidth="506.0">
+                                 <HBox.margin>
+                                    <Insets top="15.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Bell MT Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnReport2" mnemonicParsing="false" onAction="#genearteReport2" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 6px;" text="GENERATE REPORT">
+                                 <HBox.margin>
+                                    <Insets top="12.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Bell MT Bold" size="11.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <BarChart fx:id="barReport2" animated="false" title="Category Report(By Gender)">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="Frequency" side="LEFT" upperBound="50.0" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
